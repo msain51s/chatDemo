@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#dedede"
+    tools:context="com.blikoon.rooster.ProfileActivity">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="4dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <ImageView
+                android:id="@+id/Logout"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_action_io"/>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v7.widget.CardView
+        android:id="@+id/profileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#dedede"
+        android:layout_marginBottom="10dp">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:background="#ffffff"
+       android:layout_height="170dp">
+   <ImageView
+       android:id="@+id/profileImageLayoutView"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       />
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="#CCffffff"/>
+       <com.blikoon.rooster.CircleImageView
+           android:id="@+id/userProfileImageIcon"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:src="@drawable/male_contact_thumb1"
+           app:civ_border_color="@color/colorPrimary"
+           android:layout_centerInParent="true"
+           app:civ_border_width="1dp"
+           android:onClick="performFullImageDisplay"/>
+      <ImageView
+          android:id="@+id/editImageIcon"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:padding="3dp"
+          android:background="@drawable/edit_image_bg_drawable"
+          android:src="@drawable/ic_action_camera"
+          android:layout_alignBottom="@+id/userProfileImageIcon"
+          android:layout_alignRight="@+id/userProfileImageIcon"
+          android:layout_alignEnd="@+id/userProfileImageIcon"
+          android:onClick="performSelectImage"/>
+   </RelativeLayout>
+   </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/signUp_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile Details"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/editProfileInfoIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_action_edit" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/userNickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/userEmailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="email_id"
+                android:textColor="@color/light_black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/grey"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/userMobileNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="1234567890"
+                android:textColor="@color/light_black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Mobile No."
+                android:textColor="@color/grey"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+        <!--<LinearLayout
+            android:id="@+id/email_signUp_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <com.blikoon.rooster.CircleImageView
+                android:id="@+id/userProfileImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/male_contact_thumb1"
+                app:civ_border_color="#ffffff"
+                android:layout_gravity="center_horizontal"
+                app:civ_border_width="1dp"
+                android:visibility="gone"
+                android:onClick="performSelectImage"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="UserName"
+                    android:inputType="textNoSuggestions"
+                    android:maxLines="1"
+                    android:enabled="false"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/password_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:imeActionId="@+id/login"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/profileUpdate_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Update"
+                android:textColor="@color/white"
+                android:background="@color/colorAccent"
+                android:textStyle="bold"/>
+
+        </LinearLayout>-->
+    </android.support.v7.widget.CardView>
+</LinearLayout>

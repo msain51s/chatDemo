@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9fafc"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.blikoon.rooster.ChatActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <com.blikoon.rooster.CircleImageView
+            android:id="@+id/userImageView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="8dp"
+            app:civ_border_color="#00a743"
+            app:civ_border_width="2dp"
+            android:src="@drawable/male_contact_thumb1"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+    <TextView
+        android:id="@+id/friendTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+
+   <ImageView
+       android:id="@+id/attachment"
+       android:layout_width="30dp"
+       android:layout_height="30dp"
+       android:layout_margin="5dp"
+       android:layout_gravity="right"
+       android:onClick="performAttachment"
+       android:src="@drawable/ic_action_attachment_2"/>
+    </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.blikoon.rooster.db.ChatView
+        android:id="@+id/rooster_chat_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7eeef"
+        android:layout_below="@+id/appBarLayout">
+
+    </com.blikoon.rooster.db.ChatView>
+
+</RelativeLayout>

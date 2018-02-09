@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#08be50</color>
+    <color name="colorPrimaryDark">#08be50</color>
+    <color name="colorAccent">#265f54</color>
+
+    <color name="online_color">#59b871</color>
+    <color name="offline_color">#dedede</color>
+    <color name="light_black">#1f1f1f</color>
+    <color name="grey">#808080</color>
+
+    <color name="mColor">#db515d</color>
+</resources>
